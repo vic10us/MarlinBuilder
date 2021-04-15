@@ -1,0 +1,20 @@
+opt_set HOMING_BUMP_MM "{ 0, 0, 2 }"
+opt_set X_MIN_ENDSTOP_INVERTING "false"
+opt_set Y_MIN_ENDSTOP_INVERTING "false"
+opt_set X_MAX_ENDSTOP_INVERTING "false"
+opt_set Y_MAX_ENDSTOP_INVERTING "false"
+opt_set Z_MAX_ENDSTOP_INVERTING "false"
+opt_set Z_MIN_ENDSTOP_INVERTING "false"
+opt_set X_STALL_SENSITIVITY "60"
+opt_set Y_STALL_SENSITIVITY "60"
+opt_set Z_STALL_SENSITIVITY "94"
+
+opt_disable \
+    Y_DUAL_ENDSTOPS
+
+opt_enable \
+    SENSORLESS_HOMING \
+    IMPROVE_HOMING_RELIABILITY
+
+# Write some useful tidbits to the readme.
+echo "- Configured for Sensorless Homing" >> README.md
